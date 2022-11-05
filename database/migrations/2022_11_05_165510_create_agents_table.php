@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('agents', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->double('serial', 9, 3);
+            $table->dateTime('d_o_b')->nullable();
             $table->timestamps();
         });
     }

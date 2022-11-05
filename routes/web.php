@@ -21,7 +21,7 @@ Route::get('/', function () {
     return "HOME";
 });
 
-Route::get('/home/{name?}', function ($name = false) {
+Route::get('/{name?}', function ($name = false) {
     if (!$name){
         return "no name";
     }
