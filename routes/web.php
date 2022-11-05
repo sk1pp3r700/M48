@@ -17,18 +17,18 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // Route::get('/', function () {
-//     return "HOME";
+//     return view('welcome');
 // });
 
-Route::get('/{name?}', function ($name = false) {
+Route::get('/', function () {
+    return "HOME";
+});
+
+Route::get('/test/{name?}', function ($name = false) {
     if (!$name){
         return "no name";
     }
     return "home of ".$name;
-});
-
-Route::get('/', function () {
-    return view('welcome');
 });
 
 Route::get('/dashboard', function () {
