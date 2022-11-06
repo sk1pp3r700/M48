@@ -20,5 +20,7 @@ class AgentTableSeeder extends Seeder
         $a->name = "fourtyseven";
         $a->serial = 47;
         $a->save();
+
+        Agent::factory()->count(10)->create();
     }
 }
