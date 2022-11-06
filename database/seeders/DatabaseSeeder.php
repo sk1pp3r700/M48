@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
         // ]);
     
         $this->call(AgentTableSeeder::class);
+        $this->call(HandlerTableSeeder::class);
 
     }
 }

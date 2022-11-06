@@ -5,12 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Agent extends Model
+class Handler extends Model
 {
     use HasFactory;
-    
-    public function Handler()
+
+    public function agent()
     {
-        return $this->hasOne(Handler::class);
+        return $this->belongsTo(Agent::class);
     }
+    
 }
