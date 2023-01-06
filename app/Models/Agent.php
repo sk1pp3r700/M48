@@ -15,4 +15,10 @@ class Agent extends Model
     {
         return $this->hasOne(Handler::class);
     }
+
+    public function taskforce()
+    {
+        return $this->belongsTo(taskforce::class);
+    }
+
 }

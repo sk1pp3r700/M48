@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
     
+        $this->call(TaskforceTableSeeder::class);
         $this->call(AgentTableSeeder::class);
         $this->call(HandlerTableSeeder::class);
 
