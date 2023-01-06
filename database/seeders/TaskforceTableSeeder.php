@@ -19,5 +19,9 @@ class TaskforceTableseeder extends Seeder
         $e = new Taskforce;
         $e->name = "bad guys";
         $e->save();
+
+        $e2 = new Taskforce;
+        $e2->name = "other guys";
+        $e2->save();
     }
 }

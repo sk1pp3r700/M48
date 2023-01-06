@@ -19,6 +19,7 @@ class AgentTableSeeder extends Seeder
         $a = new Agent;
         $a->name = "fourtyseven";
         $a->serial = 47;
+        $a->taskforce_id= 1;
         $a->save();
 
         Agent::factory()->count(10)->create();

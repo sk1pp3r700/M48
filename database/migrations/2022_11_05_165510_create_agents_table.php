@@ -20,7 +20,7 @@ return new class extends Migration
             $table->dateTime('d_o_b')->nullable();
             $table->timestamps();
 
-            $table->bigInteger('Taskforce_id')->refrences('id')->on('Taskforce')
+            $table->bigInteger('taskforce_id')->refrences('id')->on('taskforce')
             ->onDelete('cascade')->onUpdate('cascade');
         });
     }
