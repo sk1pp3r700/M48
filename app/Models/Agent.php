@@ -21,4 +21,9 @@ class Agent extends Model
         return $this->belongsTo(taskforce::class);
     }
 
+    public function operators()
+    {
+        return $this->belongsToMany(Operator::class);
+    }
+
 }

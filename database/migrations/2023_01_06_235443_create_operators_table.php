@@ -13,15 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('agents', function (Blueprint $table) {
+        Schema::create('operators', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->double('serial', 9, 3);
-            $table->dateTime('d_o_b')->nullable();
             $table->timestamps();
-
-            $table->bigInteger('taskforce_id')->refrences('id')->on('taskforce')
-            ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
@@ -32,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('agents');
+        Schema::dropIfExists('operators');
     }
 };

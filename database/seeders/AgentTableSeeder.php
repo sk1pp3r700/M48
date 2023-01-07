@@ -22,6 +22,6 @@ class AgentTableSeeder extends Seeder
         $a->taskforce_id= 1;
         $a->save();
 
-        Agent::factory()->count(10)->create();
+        Agent::factory()->count(50)->create();
     }
 }

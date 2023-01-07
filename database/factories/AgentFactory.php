@@ -19,7 +19,7 @@ class AgentFactory extends Factory
         return [
             'name' => fake()->name(),
             'serial' => fake()->randomFloat(5, 50, 99),
-            'taskforce_id' => 1,
+            'taskforce_id' => fake()->numberBetween(1,2),
         ];
     }
 }

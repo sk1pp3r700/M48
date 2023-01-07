@@ -4,9 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Handler;
 
-class HandlerTableSeeder extends Seeder
+class OperatorsTableseeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,11 +14,10 @@ class HandlerTableSeeder extends Seeder
      */
     public function run()
     {
-        $h = new Handler;
-        $h->name = "skipper";
-        $h->agent_id = 1;
-        $h->save();
-
-       //Handler::factory()->count(50)->create();
+        $k = new Operator;
+        $k->name = "kronos";
+        $k->save(); 
+        $k->agents()->attach(1);
+        $k->agents()->attach(9);
     }
 }
