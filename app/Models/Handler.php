@@ -1,5 +1,7 @@
 <?php
 
+##OG_SKIPPER
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -13,5 +15,5 @@ class Handler extends Model
     {
         return $this->belongsTo(Agent::class);
     }
-    
+
 }
