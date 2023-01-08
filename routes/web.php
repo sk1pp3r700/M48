@@ -12,24 +12,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('/away', function () {
-//     return "away";
-// });
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 Route::get('/', function () {
-    return "HOME";
+    return view('welcome');
 });
 
-Route::get('/test/{name?}', function ($name = false) {
-    if (!$name){
-        return "no name";
-    }
-    return "home of ".$name;
-});
+// Route::get('/', function () {
+//     return "welcome";
+// });
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
