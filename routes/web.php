@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AgentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-// Route::get('/', function () {
-//     return "welcome";
-// });
+Route::get('/agents', [AgentController::class, 'index']);
 
 
 Route::get('/dashboard', function () {
