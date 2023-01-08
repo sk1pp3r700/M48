@@ -47,7 +47,8 @@ class AgentController extends Controller
      */
     public function show($id)
     {
-        //
+        $agent = Agent::findOrFail($id);
+        return view ('agents.show', ['agent'=>$agent]);
     }
 
     /**
